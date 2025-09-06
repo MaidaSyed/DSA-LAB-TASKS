@@ -1,7 +1,7 @@
 # 📚 DSA Lab – FAST NUCES (3rd Semester)
 
 <p align="center">
-  <img src=https://upload.wikimedia.org/wikipedia/en/4/44/National_University_of_Computer_and_Emerging_Sciences_logo.png" alt="FAST Logo" width="200"/>
+  <img src="fast-logo.png" alt="FAST Logo" width="200"/>
 </p>
 
 <p align="center">
