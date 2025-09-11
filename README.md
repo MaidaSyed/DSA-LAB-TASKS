@@ -24,7 +24,8 @@ It includes all lab tasks, organized properly for reference and record keeping.
  ┣ 📂 Lab01 - Revision Of Advanced OOP Concepts  
  ┣ 📂 Lab02 - 1D and 2D Dynamic Safe Pointers and Jagged Array  
  ┣ 📂 Lab03 - Linked Lists  
- ┣ 📂 Lab04 - Sorting Algorithms```
+ ┣ 📂 Lab04 - Sorting Algorithms  
+ 
  ┣ 📄 README.md  
 
 ---
