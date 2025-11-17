@@ -1,13 +1,43 @@
 #include <iostream>
 using namespace std;
 
-int kLargestElem(int arr[], int n, int k){
-    for(int i=0; i<n; i++){
-        for(int j=0; j<n-i-1; j++){
-            if(arr[j] < arr[j+1]) swap(arr[j], arr[j+1]);
-        }
+void heapify(int arr[], int n, int i){
+    int largest = i;
+    int left = 2*i + 1;
+    int right = 2*i + 2;
+
+    if(left < n && arr[left] > arr[largest]) largest = left;
+
+    if(right < n && arr[right] > arr[largest]) largest = right;
+
+    if(largest != i){
+        swap(arr[i], arr[largest]);
+        heapify(arr, n, largest);
     }
-    return arr[k-1];
+}
+
+void maxHeap(int arr[], int n){
+    for(int i=n/2-1; i>=0; i--) heapify(arr, n, i);
+}
+
+int extractMax(int arr[], int &n){
+    if(n <= 0) return -1;
+
+    int maxVal = arr[0];
+    arr[0] = arr[n-1];
+    n--;
+    heapify(arr, n, 0);
+    return maxVal;
+}
+
+int kLargestElem(int arr[], int n, int k){
+    maxHeap(arr, n);
+
+    int val = -1;
+    for(int i=0; i<k; i++){
+        val = extractMax(arr, n);
+    }
+    return val;
 }
 
 int main(){
